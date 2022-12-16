@@ -76,7 +76,7 @@ rosrun swarm_robot_simulation two_wheel_robot_line_formation _spring_length:=0.7
 ```
 cd catkin_ws
 source devel/setup.bash
-catkin_make ,tests>
+catkin_make <tests>
 ``` 
 
 ## Command to check Google Style
