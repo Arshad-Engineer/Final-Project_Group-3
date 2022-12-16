@@ -68,14 +68,17 @@ catkin_make
 cd catkin_ws
 source devel/setup.bash
 ```
+```
+roslaunch swarm_robot_description two_wheel_robot.launch robot_quantity:=20 half_range:=0.5
+rosrun swarm_robot_simulation two_wheel_robot_line_formation _spring_length:=0.7 _sensing_range:=2.0
+```
 ## Test
 ```
 cd catkin_ws
 source devel/setup.bash
+catkin_make ,tests>
 ``` 
-roslaunch swarm_robot_description two_wheel_robot.launch robot_quantity:=20 half_range:=0.5
-rosrun swarm_robot_simulation two_wheel_robot_line_formation _spring_length:=0.7 _sensing_range:=2.0
-```
+
 ## Command to check Google Style
 - From the Final-Project_Group-3 folder src directory, run the below command
 ```
