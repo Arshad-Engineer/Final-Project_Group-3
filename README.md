@@ -37,7 +37,7 @@
  - Ubuntu 20.4
  - VS Code/Terminal
  - Gazebo
- - ROS1 Galactic
+ - ROS1 noetic
  
 ## AIP Google Sheet
  - https://docs.google.com/spreadsheets/d/1qG9Fnqy8YEA1hoCkJ37Z2tK7iZklYtnleDhth3kJcko/edit?usp=sharing
@@ -61,16 +61,21 @@
 - The test case will subscribe to the topic and check for the exxpected output
 
 ## How to build, run & test from command line
+- Navigate to workspace
 ```
-colcon build --packages-select <list of packages>
-
-colcon test --packages-select <list of packages>
-cat log/latest_test/<list of packages>/stdout_stderr.log
- 
+cd ..
+catkin_make
+cd catkin_ws
+source devel/setup.bash
+```
+## Test
+```
+cd catkin_ws
+source devel/setup.bash
+``` 
 roslaunch swarm_robot_description two_wheel_robot.launch robot_quantity:=20 half_range:=0.5
 rosrun swarm_robot_simulation two_wheel_robot_line_formation _spring_length:=0.7 _sensing_range:=2.0
 ```
-
 ## Command to check Google Style
 - From the Final-Project_Group-3 folder src directory, run the below command
 ```
@@ -82,4 +87,4 @@ cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_orde
 cppcheck --enable=all --std=c++17 *.cpp --suppress=missingIncludeSystem --suppress=missingInclude --suppress=unmatchedSuppression > ./../results/cppcheckreport
 ```
 ## Command to generatte doxygen documentation
-(will be added in next phase)
+
