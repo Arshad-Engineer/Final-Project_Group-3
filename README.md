@@ -63,7 +63,7 @@
 ## How to build, run & test from command line
 ```
 colcon build --packages-select <list of packages>
-```
+
 colcon test --packages-select <list of packages>
 cat log/latest_test/<list of packages>/stdout_stderr.log
  
