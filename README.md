@@ -58,7 +58,7 @@
 - Please find 'src' folder of this repository to know more about the messages and services
 
 ## Sections for Stubs:
-- The test case will subscribe to the topic and check for the exxpected output
+- The test case will subscribe to the topic and check for the expected output
 
 ## How to build, run & test from command line
 - Navigate to workspace
@@ -90,4 +90,8 @@ cpplint --filter=-build/c++11,+build/c++17,-build/namespaces,-build/include_orde
 cppcheck --enable=all --std=c++17 *.cpp --suppress=missingIncludeSystem --suppress=missingInclude --suppress=unmatchedSuppression > ./../results/cppcheckreport
 ```
 ## Command to generatte doxygen documentation
-
+```
+doxygen <cpp file>
+cd html
+firefox index.html
+```
